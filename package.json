@@ -1,0 +1,29 @@
+{
+    "name": "todo-app",
+    "version": "1.0.0",
+    "description": "A ToDo MEAN App",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "ser": "cd ..\\..\\ && cd MongoDB && mongod --dbpath data --bind_ip 127.0.0.1",
+        "devStart": "concurrently -n Mongo,Node -c green,red \"npm run ser\" \"nodemon index\"",
+        "start": "nodemon index"
+    },
+    "author": "Akshay Sethia",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.27.0",
+        "mongoose": "^5.9.22",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.4",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0"
+    },
+    "devDependencies": {
+        "concurrently": "^5.2.0"
+    }
+}
